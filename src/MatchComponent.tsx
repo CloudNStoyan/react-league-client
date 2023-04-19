@@ -30,7 +30,7 @@ const GetData = (match: GameMatch, playerPuuid: string) => {
     staticSummonerData.find((s) => s.key === id.toString())
   );
 
-  const champSquareSrc = `http://ddragon.leagueoflegends.com/cdn/13.5.1/img/champion/${player.championName}.png`;
+  const champSquareSrc = `https://ddragon.leagueoflegends.com/cdn/13.5.1/img/champion/${player.championName}.png`;
 
   const keystoneData = player.perks.styles[0];
   const subTreeId = player.perks.styles[1].style;
@@ -143,7 +143,7 @@ const SummonerSpell: FunctionComponent<{ spell: SummonerSpellType }> = ({
         title={spell.name}
         width={20}
         height={20}
-        src={`http://ddragon.leagueoflegends.com/cdn/${ddragonVersion}/img/spell/${spell.image.full}`}
+        src={`https://ddragon.leagueoflegends.com/cdn/${ddragonVersion}/img/spell/${spell.image.full}`}
       />
     </div>
   );
@@ -177,7 +177,7 @@ const Item: FunctionComponent<{ item?: ItemType }> = ({ item }) => {
     <div className="w-8 h-8">
       <img
         title={item.name}
-        src={`http://ddragon.leagueoflegends.com/cdn/${ddragonVersion}/img/item/${item.image.full}`}
+        src={`https://ddragon.leagueoflegends.com/cdn/${ddragonVersion}/img/item/${item.image.full}`}
       />
     </div>
   );
@@ -192,7 +192,7 @@ const Summoner: FunctionComponent<{
     (state) => state.mainReducer.ddragonVersion
   );
 
-  const champSquareSrc = `http://ddragon.leagueoflegends.com/cdn/${ddragonVersion}/img/champion/${participant.championName}.png`;
+  const champSquareSrc = `https://ddragon.leagueoflegends.com/cdn/${ddragonVersion}/img/champion/${participant.championName}.png`;
   return (
     <a
       className={`flex gap-2 items-center cursor-pointer select-none ${
