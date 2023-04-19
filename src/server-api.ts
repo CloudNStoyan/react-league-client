@@ -1,7 +1,9 @@
 import { GameMatch, SummonerDTO } from "./apiTypes";
 
 const BASE_ENDPOINT =
-  process.env.NODE_ENV === "development" ? "http://localhost:8004" : "/api";
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:8004"
+    : "https://express-league-server.onrender.com";
 
 export type FetchStatus = "loading" | "succeeded" | "failed" | "idle";
 
